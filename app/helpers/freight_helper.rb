@@ -1,0 +1,2 @@
+module FreightHelper
+end

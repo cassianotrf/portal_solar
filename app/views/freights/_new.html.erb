@@ -1,0 +1,33 @@
+<div class="modal-header">
+  <h4 id="myModalLabel">Frete </h4>
+</div>
+<div class="modal-body">
+  <label>Cep: <%= params[:zipcode] %> </label><br>
+  <label>Cidade: <%= params[:address]["city"]%></label><br>
+  <label>Estado: <%= params[:address]["state"] %></label><br>
+  <label>Bairro: <%= params[:address]["district"] %> </label><br>
+  <label>Endereço: <%= params[:address]["address"] %> </label><br>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Preço</th>
+        <th>Entrega</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> Sedex </td>
+        <td> R$23,40 </td>
+        <td> 3 - 5 dias </td>
+      </tr>
+      <tr>
+        <td> Pac </td>
+        <td> R$33,40 </td>
+        <td> 12 - 15 dias </td>
+      </tr>
+  </table>
+<div>
+<div class="botao_voltar justify-content-center" style="display:flex">
+  <div class="btn btn-warning btn-circle"><%= link_to "Voltar", root_path%></div>
+</div>
