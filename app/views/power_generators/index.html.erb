@@ -20,15 +20,15 @@
         </div>
       </div>
       <div class="advanced-form" style="display:none;">
+        <%= select_tag :advanced_search_for_select,  options_for_select((advanced_search_for_select), params[:advanced_search_for_select]), include_blank: "Filtrar por:", class: 'btn btn-warning btn-filter', style: 'margin-left: 20px' %>
         <div class="simple-form__input">
           <%= text_field_tag :keyword_ad, params[:keyword_ad], class: "form-control form-control-lg", placeholder: "o que procura?" %>
         </div>
-        <%= select_tag :advanced_search_for_select,  options_for_select((advanced_search_for_select), params[:advanced_search_for_select]), include_blank: "Procurar por:", class: 'btn btn-warning btn-filter', style: 'margin-left: 5px' %>
         <button type="submit" class="btn btn-warning btn-circle" style="margin-left: 60px">Pesquisar</button>
       </div>
   </div><br>
   <div class="filter pull-right">
-    <%= select_tag :filter_power_generators,  options_for_select((power_generators_for_select), params[:filter_power_generators]), onchange: "this.form.submit();", include_blank: "Filtrar por:", class: 'btn btn-warning btn-filter' %>
+    <%= select_tag :filter_power_generators,  options_for_select((power_generators_for_select), params[:filter_power_generators]), onchange: "this.form.submit();", include_blank: "Ordenar por:", class: 'btn btn-warning btn-filter' %>
   </div>
   <% end %>
 </div><br><br>
@@ -62,7 +62,11 @@
 <script>
   $(".form-check").change(function() {
     if ($('.form-check-input').prop('checked') == true) {
-      $('#advanced_search_for_select').val("");;
+      $('#advanced_search_for_select').val("");
+      $('#keyword_ad').val("");
+    }
+    else {
+      $('#keyword').val("");
     }
   })
 </script>
