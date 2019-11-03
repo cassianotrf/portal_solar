@@ -21,6 +21,8 @@ gem 'font-awesome-rails'
 gem 'kaminari'
 gem 'httparty'
 gem "rubyzip", ">= 1.3.0"
+gem 'pg_search'
+gem 'correios-frete'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -30,8 +32,6 @@ group :development do
   gem 'pry', '~> 0.12.2'
   gem 'pry-remote'
   gem 'pry-nav'
-  gem 'pg_search'
-  gem 'correios-frete'
 end
 
 group :test do
