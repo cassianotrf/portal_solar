@@ -7,6 +7,3 @@ development:
   database: PortalSolarDevTest_development
 production:
   <<: *default
-  database: PortalSolarDevTest_production
-  username: PortalSolarDevTest
-  password: <%= ENV['PORTALSOLARDEVTEST_DATABASE_PASSWORD'] %>
