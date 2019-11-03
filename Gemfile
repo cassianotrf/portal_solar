@@ -20,6 +20,7 @@ gem "bootstrap"
 gem 'font-awesome-rails'
 gem 'kaminari'
 gem 'httparty'
+gem "rubyzip", ">= 1.3.0"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
